@@ -2,7 +2,7 @@
 
 name: CICD
 
-# Manual click workflow whenever required
+# Manual click (deliver) workflow whenever user required
 on:
   workflow_dispatch:
 
