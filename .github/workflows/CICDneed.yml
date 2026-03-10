@@ -4,7 +4,8 @@ name: CICD
 
 # Manual click (deliver) workflow whenever user required
 on:
-  workflow_dispatch:
+  push:
+    branches: [main]
 
 jobs:
   code:
