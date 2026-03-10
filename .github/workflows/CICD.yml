@@ -6,6 +6,8 @@ name: CICD
 on:
   push:
     branches: [main]
+    paths:
+      - '**.html'
 
 jobs:
   code:
