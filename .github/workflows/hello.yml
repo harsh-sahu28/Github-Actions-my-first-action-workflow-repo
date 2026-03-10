@@ -16,3 +16,9 @@ jobs:
     steps:
       - name: say hello to users
         run: echo "Hello doston"
+
+  details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show what is the version of python,docker,etc
+        run: docker --version && python --version
