@@ -16,7 +16,8 @@ jobs:
     steps:
       - name: say hello to users
         run: echo "Hello doston"
-
+  
+  # this is the name of the job
   details:
     runs-on: ubuntu-latest
     steps:
