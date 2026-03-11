@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Harsh Sahu | DevOps Engineer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
 
@@ -11,217 +15,235 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family: Arial, Helvetica, sans-serif;
+font-family:Consolas, monospace;
+scroll-behavior:smooth;
 }
 
 body{
-background:#0f172a;
-color:white;
-line-height:1.6;
+background:#0b0f19;
+color:#e5e7eb;
 }
 
 header{
-background:#020617;
-padding:20px;
-position:sticky;
-top:0;
-}
-
-nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-max-width:1100px;
-margin:auto;
+padding:20px 10%;
+background:#05070d;
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
 }
 
-nav h1{
-color:#38bdf8;
+header h1{
+color:#22c55e;
 }
 
-nav ul{
-display:flex;
-list-style:none;
-}
-
-nav ul li{
-margin-left:20px;
-}
-
-nav ul li a{
+nav a{
+margin-left:25px;
+text-decoration:none;
 color:white;
-text-decoration:none;
-}
-
-.hero{
-height:90vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-flex-direction:column;
-}
-
-.hero h2{
-font-size:45px;
-}
-
-.hero span{
-color:#38bdf8;
-}
-
-.hero p{
-margin-top:10px;
-max-width:600px;
-}
-
-.btn{
-margin-top:20px;
-padding:12px 25px;
-background:#38bdf8;
-color:black;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
 }
 
 section{
-max-width:1100px;
-margin:auto;
-padding:80px 20px;
+padding:100px 10%;
 }
 
-h2{
-margin-bottom:30px;
-color:#38bdf8;
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero h2{
+font-size:50px;
+color:#22c55e;
+}
+
+.terminal{
+margin-top:25px;
+background:black;
+padding:20px;
+border-radius:8px;
+max-width:650px;
+}
+
+.terminal p{
+color:#22c55e;
+}
+
+.cursor{
+display:inline-block;
+background:#22c55e;
+width:10px;
+height:20px;
+animation:blink 1s infinite;
+}
+
+@keyframes blink{
+50%{opacity:0;}
 }
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
 .skill{
-background:#1e293b;
-padding:20px;
-border-radius:8px;
+background:#111827;
+padding:25px;
+border-radius:10px;
+text-align:center;
+transition:0.3s;
+}
+
+.skill:hover{
+transform:translateY(-6px);
+background:#1f2937;
+}
+
+.skill i{
+font-size:40px;
+color:#22c55e;
+margin-bottom:10px;
 }
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:40px;
 }
 
 .project{
-background:#1e293b;
-padding:20px;
-border-radius:8px;
+background:#111827;
+padding:25px;
+border-radius:10px;
+transition:0.3s;
+}
+
+.project:hover{
+transform:translateY(-6px);
+background:#1f2937;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+color:#22c55e;
+font-size:22px;
+margin:10px;
+display:inline-block;
 }
 
 footer{
 text-align:center;
-padding:30px;
-background:#020617;
-margin-top:40px;
+padding:25px;
+background:#05070d;
+}
+
+@media(max-width:800px){
+
+.hero h2{
+font-size:35px;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
-<nav>
+
 <h1>Harsh Sahu</h1>
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
+<nav>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </nav>
-</header>
 
+</header>
 
 <section class="hero">
 
-<h2>Hello, I'm <span>Harsh Sahu</span></h2>
+<h2>DevOps Engineer</h2>
 
-<p>
-DevOps Engineer passionate about Linux, Cloud Infrastructure, Automation and CI/CD.
-I enjoy building scalable infrastructure and automating deployments.
-</p>
+<div class="terminal">
 
-<a class="btn" href="#contact">Contact Me</a>
+<p id="typing"></p>
+
+</div>
 
 </section>
-
-
 
 <section id="about">
 
 <h2>About Me</h2>
 
-<p>
-DevOps Engineer with strong experience in Linux system administration, containerization,
-and cloud infrastructure. Skilled in building CI/CD pipelines, automating deployments,
-and maintaining production environments.
-</p>
+<p style="margin-top:20px; max-width:700px; line-height:1.7;">
 
-<p>
-Hands-on experience with Docker, Git, AWS and Linux troubleshooting.
-Currently expanding expertise in DevOps tools and cloud architecture.
+DevOps enthusiast focused on building reliable and automated
+infrastructure. Experienced in Linux administration, Docker
+containerization, Kubernetes orchestration, Git workflows and
+cloud infrastructure.
+
+Passionate about automation, CI/CD pipelines and scalable
+cloud architecture.
+
 </p>
 
 </section>
 
-
-
 <section id="skills">
 
-<h2>Technical Skills</h2>
+<h2>DevOps Tools</h2>
 
 <div class="skills">
 
 <div class="skill">
+<i class="fab fa-linux"></i>
 <h3>Linux</h3>
-<p>RHEL, Oracle Linux, System troubleshooting, GRUB, Permissions, LVM</p>
 </div>
 
 <div class="skill">
-<h3>Containerization</h3>
-<p>Docker, Dockerfile, Docker Compose, Container Networking</p>
+<i class="fab fa-docker"></i>
+<h3>Docker</h3>
 </div>
 
 <div class="skill">
-<h3>Version Control</h3>
-<p>Git, GitHub, Branching, Merge, Rebase, Stash</p>
+<i class="fas fa-dharmachakra"></i>
+<h3>Kubernetes</h3>
 </div>
 
 <div class="skill">
-<h3>Cloud</h3>
-<p>AWS EC2, S3, IAM, Infrastructure basics</p>
+<i class="fab fa-aws"></i>
+<h3>AWS</h3>
 </div>
 
 <div class="skill">
-<h3>DevOps</h3>
-<p>CI/CD concepts, Automation, Infrastructure management</p>
+<i class="fab fa-git-alt"></i>
+<h3>Git</h3>
 </div>
 
 <div class="skill">
-<h3>Scripting</h3>
-<p>Bash scripting and automation</p>
+<i class="fas fa-terminal"></i>
+<h3>Bash</h3>
 </div>
 
 </div>
 
 </section>
-
-
 
 <section id="projects">
 
@@ -230,50 +252,40 @@ Currently expanding expertise in DevOps tools and cloud architecture.
 <div class="projects">
 
 <div class="project">
-<h3>Dockerized Web Server</h3>
-<p>
-Created a Dockerfile to deploy Nginx on Ubuntu container with exposed ports
-and containerized environment.
-</p>
+<h3>Dockerized Nginx Server</h3>
+<p>Containerized Nginx server with Dockerfile and port mapping deployment.</p>
 </div>
 
 <div class="project">
-<h3>MySQL Docker Deployment</h3>
-<p>
-Deployed MySQL using Docker Compose with health checks and environment variables.
-</p>
+<h3>MySQL Docker Compose</h3>
+<p>Configured MySQL service with Docker Compose, health checks and environment variables.</p>
 </div>
 
 <div class="project">
 <h3>Linux Automation Scripts</h3>
-<p>
-Developed bash scripts for server monitoring, system validation and automation tasks.
-</p>
+<p>Created shell scripts for system validation, automation and monitoring.</p>
 </div>
 
 <div class="project">
-<h3>Git Workflow Automation</h3>
-<p>
-Implemented Git workflows including branching, stash, merge conflict resolution.
-</p>
+<h3>Git Workflow Setup</h3>
+<p>Implemented Git branching strategy and repository management.</p>
 </div>
 
 </div>
 
 </section>
 
+<section id="contact" class="contact">
 
+<h2>Connect With Me</h2>
 
-<section id="contact">
+<a href="#"><i class="fab fa-github"></i></a>
 
-<h2>Contact</h2>
+<a href="#"><i class="fab fa-linkedin"></i></a>
 
-<p>Email: your-email@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/yourprofile</p>
-<p>GitHub: github.com/yourusername</p>
+<a href="#"><i class="fas fa-envelope"></i></a>
 
 </section>
-
 
 <footer>
 
@@ -281,5 +293,30 @@ Implemented Git workflows including branching, stash, merge conflict resolution.
 
 </footer>
 
+<script>
+
+const text="harsh@devops:~$ docker build portfolio\nharsh@devops:~$ kubectl deploy production\nharsh@devops:~$ CI/CD pipeline running...\nSystem ready.";
+
+let i=0;
+
+function type(){
+
+if(i<text.length){
+
+document.getElementById("typing").innerHTML+=text.charAt(i);
+
+i++;
+
+setTimeout(type,40);
+
+}
+
+}
+
+type();
+
+</script>
+
 </body>
+
 </html>
