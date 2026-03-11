@@ -7,3 +7,4 @@ Just a readme file
 also adding push action in cicd actions.
 
 Added condition to not run cicd if commit.
+Trying to see if any github actions works or not
