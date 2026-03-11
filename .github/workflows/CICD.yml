@@ -10,7 +10,7 @@ on:
         description: This is the environment where this workflow runs
         default: 'dev'
         required: true
-        type: choice 
+        type: choice
         options:
           - dev
           - prod
