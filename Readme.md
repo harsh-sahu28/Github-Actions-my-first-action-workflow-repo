@@ -5,3 +5,5 @@ Just a readme file
 
 ### New change
 also adding push action in cicd actions.
+
+Added condition to not run cicd if commit.
