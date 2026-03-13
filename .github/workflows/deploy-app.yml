@@ -9,7 +9,7 @@ jobs:
         env:
             DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
             
-        runs-on: self_hosted
+        runs-on: self-hosted
 
         steps:
             - name: checkout code
