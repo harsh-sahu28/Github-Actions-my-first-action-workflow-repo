@@ -1,0 +1,4 @@
+# Scan docker file for issues and common vulnerabilities (CVEs)
+
+name: Docker lint
+

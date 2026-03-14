@@ -1,0 +1,3 @@
+# Scan packages for any vulnerability
+
+name: Dependency Scan
