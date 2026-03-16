@@ -1,0 +1,3 @@
+# Ignore the VNE for libgc
+
+CVE-2026-0861
