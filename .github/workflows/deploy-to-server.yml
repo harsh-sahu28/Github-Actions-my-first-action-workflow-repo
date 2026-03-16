@@ -8,9 +8,7 @@ on:
 jobs:
     deploy:
         runs-on: ubuntu-latest
-        steps:
-            - name: Copy docker compose file
-              uses: appleboy/scp-action@v1
+        steps:            
             - name: SSH to Prod server
               uses: appleboy/ssh-action@v1.0.3
               with:
