@@ -13,7 +13,7 @@ jobs:
         if: github.event.workflow_run.conclusion == 'success'
         env:
             DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
-            DOCKER_TAG: ${{ github.event.workflow_run.head_sha }}
+            DOCKER_TAG: ${{ github.sha }}
 
         runs-on: self-hosted
 
