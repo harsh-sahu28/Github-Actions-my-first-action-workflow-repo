@@ -11,7 +11,7 @@ jobs:
         env:
             DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
             DOCKER_TAG: ${{ github.event.workflow_run.head_sha }}
-            
+
         steps:
             - name: Checkout Code
               uses: actions/checkout@v4
@@ -46,8 +46,6 @@ jobs:
                 key: ${{ secrets.EC2_SSH_PRIVATE_KEY }} 
                 script: |
                     echo "Runing App"
-                                        
-                    export DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
-                    export DOCKER_TAG: ${{ github.event.workflow_run.head_sha }}
+                          
                     echo ${{ secrets.DOCKERHUB_TOKEN}} | docker login -username ${{ vars.DOCKERHUB_USER }} --password-stdin
                     cd ~/devops && docker compose down && docker compose up -d --build --force-recreate --pull always
